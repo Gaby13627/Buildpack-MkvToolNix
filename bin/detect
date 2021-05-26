@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Only use buildpack if MKVToolNix is not installed yet
+if command -v MKVToolNix >/dev/null 2>&1; then
+  exit 1
+else
+  echo "MKVToolNix"
+  exit 0
+fi
